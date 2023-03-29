@@ -1,31 +1,35 @@
 #include <stdio.h>
 #include <string.h>
 int main() {
-	char nome[20];
-	int peso;
-	float altura;
-	printf("Digite seu nome: \n");
-	scanf("%s", nome);
-	printf("Digite seu peso: \n");
-	scanf("%d", &peso);
-	printf("Digite sua altura: \n");
-	scanf("%f", &altura);
-	double conta = peso/(altura*altura);
-	double agua = peso*35/1000;
-	printf("Seu IMC é %.2f\n", conta);
-	if (conta < 18)
+	char name[20];
+	int weight;
+	float height;
+	printf("Tip your name: \n");
+	scanf("%s", name);
+	printf("Tip your weight: \n");
+	scanf("%d", &weight);
+	printf("Tip your height: \n");
+	scanf("%f", &height);
+	double c = weight/(height*height);
+	double water = weight*35/1000;
+	printf("Your BMI is %.2f\n", c);
+	if (c < 18)
 	{
-		printf("Você está classificado como : ""Magreza"" Atenção!!!\n");
+		printf("You're classified as : ""UnderWeight"" Attention!!!\n");
 	}
-	if (conta > 18 & conta < 25)
+	if (c > 18 & c < 25)
 	{
-		printf("Você está classificado como: ""Peso Normal"" \n");
+		printf("You're classified as : ""Normal"" \n");
 	}
-	if (conta > 25)
+	if (c > 25 % c < 29.9)
 	{
-		printf("Você está classificado como: ""Sobrepeso"" Atenção!!!\n");
+		printf("You're classified as: ""OverWeight"" Attention!!!\n");
 	}
-	printf("Você precisa tomar %.2f litros de água por dia\n", agua);
+	if (c > 29.9)
+	{
+		printf("You're classified as: ""Obesity"" Attention!!!\n");
+	}
+	printf("You need to drink %.2f liters of water a day\n", water);
 
 	return 0;
 }
